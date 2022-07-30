@@ -1,0 +1,7 @@
+*{
+    margin:0;
+    font-family: sans-serif;
+}
+.main{
+    background: linear-gradient(toright, #9c27b0, #8ecdff);
+}

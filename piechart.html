@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: start;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+#tooltip {
+  position:absolute;
+  z-index: 10;
+  opacity: 0;
+  background: #fff;
+  padding: 10px;
+}
+
+</style>
+<body>
+  <div class="container">
+    <a href="index.html">Voter turnup</a> &nbsp &nbsp
+    <a href="map.html">Voters</a> &nbsp &nbsp
+    <a href="piechart.html">Pie-Chart</a>&nbsp &nbsp
+    <a href="scatterplot.html">Scatter-Plot</a> &nbsp &nbsp
+    <a href="barchart.html">Bar-Chart</a>
+    <h3> Uganda Presidential Elections 2021: Percentage of votes obtained by each candidate.</h3>
+    <li>Hover on slice to show details </li>
+  </div>
+  <div id="tooltip">
+    <div class="name"></div>
+    <div class="value"></div>
+  </div>
+  
+<script src="//d3js.org/d3.v3.min.js"></script>
+
+  
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+	
+<script src="pc.js"></script>
+  </body>
+  </html>

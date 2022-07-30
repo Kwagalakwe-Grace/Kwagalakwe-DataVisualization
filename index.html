@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Presidential Elections</title>
+
+		<!-- CSS libraries -->
+    	<link href="http://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Custom CSS styles -->
+		<link href="style.css" rel="stylesheet" type="text/css" >
+	</head>
+	<body>
+		<a href="map2.html">Voter turnup</a> &nbsp &nbsp
+        <a href="map.html">Voters</a> &nbsp &nbsp
+        <a href="piechart.html">Pie-Chart</a>&nbsp &nbsp
+        <a href="scatterplot.html">Scatter-Plot</a> &nbsp &nbsp
+        <a href="barchart.html">Bar-Chart</a>
+		<div class="container">
+			<h5> Uganda Presidential Elections 2021:Percentage of Voter turn-up at District level</h5>
+			<div id="initial">
+				<strong>Description</strong>
+				<ul>
+					
+					<li>Map color-key: Increase in color intensity indicates an increase in percentage of voter turn-up.</li>
+					<li>Color variations represent the party color that was best in that district: Yellow for NRM, Red for NUP and Blue for FDC.</li>
+				</ul>
+			</div>		
+
+			<div id="map"> <!-- Map container --> </div>
+
+			<div id="details"><!-- Details container --></div>
+
+		</div> 
+		<div id="footer">
+				<strong>Note</strong> : Data and Score (Aggregate) used are only for test purposes, in building this map visualisation, and should not be used to inform interventions.
+			</div>
+
+		<!-- Mustache template, rendered later to show the details of a feature -->
+	    <script id="template" type="x-tmpl-mustache">
+	      <h3 >{{ District }}</h3>
+	      <table>
+           
+	        <tr>
+	          <th> AMURIAT OBOI PATRICK:</th>
+	          <td>{{ AMURIAT OBOI PATRICK}}</td>
+	        </tr>
+	       	<tr>
+	          <th> KABULETA KIIZA JOSEPH:</th>
+	          <td>{{KABULETA KIIZA JOSEPH }} </td>
+	        </tr>
+	        <tr>
+	          <th> KALEMBE NANCY LINDA:</th>
+	          <td>{{ KALEMBE NANCY LINDA }} </td>
+	        </tr>
+	        <tr>
+	          <th> KYAGULANYI SSENTAMU ROBERT:</th>
+	          <td>{{KYAGULANYI SSENTAMU ROBERT }} </td>
+	        </tr>
+	        <tr>
+	          <th> MAO NORBERT:</th>
+	          <td>{{ MAO NORBERT }} </td>
+	        </tr>
+	        <tr>
+	          <th> MUGISHA MUNTU GREGG:</th>
+	          <td>{{ MUGISHA MUNTU GREGG }} </td>
+	        </tr>
+	        <tr>
+	          <th> MAYAMBALA WILLY:</th>
+	          <td>{{ MAYAMBALA WILLY }} </td>
+	        </tr>
+	        <tr>
+	          <th> MWESIGYE FRED:</th>
+	          <td>{{ MWESIGYE FRED }} </td>
+	        </tr>
+	        <tr>
+	          <th> TUMUKUNDE HENRY KAKURUGU:</th>
+	          <td>{{ TUMUKUNDE HENRY KAKURUGU }} </td>
+	        </tr>
+			<tr>
+			  <th>YOWERI MUSEVENI  KAGUTA</th>
+			  <td> {{YOWERI MUSEVENI  KAGUTA}} </td>
+		
+			</tr>
+			<tr>
+			  <th>KATUMBA JOHN</th>
+			  <td>{{KATUMBA JOHN}} </td>
+			</tr>
+            <tr>
+                <th> Valid Votes:</th>
+                <td>{{ Valid Votes }} </td>
+            </tr>
+            <tr>
+                <th> Invalid Votes:</th>
+                <td>{{Invalid Votes }} </td>
+            </tr>
+            <tr>
+                <th> Total Votes:</th>
+                <td>{{Total Votes }} </td>
+            </tr>
+            <tr>
+                <th> RegVoters:</th>
+                <td>{{RegVoters }} </td>
+            </tr>
+	
+	      </table>	      
+	    </script>
+
+
+		<!-- Tooltip div -->
+		<div id="tooltip">
+		<p class="name"></p>
+		<p class="value"></p>
+		</div>
+
+
+		<!-- JS Libraries -->
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+
+		<!-- Custom JS code -->
+		<script src="map2.js"></script>
+	</body>
+</html>
