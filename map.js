@@ -161,9 +161,7 @@ d3.csv("disdata.csv", function(cdata) {
 			.enter()
 			.append("path")
 			.attr("d", path)
-			.on("mouseover", hoveron)
-			.on("mouseout", hoverout)
-			.on('click', showDetails)
+			.on("mouseover", showDetails)
 			.style("cursor", "pointer")
 			.style("stroke", "#777")
 			.style("fill", function(d) {
