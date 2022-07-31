@@ -12,10 +12,10 @@ var template = d3.select('#template').html();
 Mustache.parse(template);
 
 var hoveron = function(d) {
-	console.log('d', d, 'event', event);
+	console.log('d', d, 'event', window.event);
 	var div = document.getElementById('tooltip');
-	div.style.left = event.pageX + 'px';
-	div.style.top = event.pageY + 'px';
+	div.style.left = window.event.pageX + 'px';
+	div.style.top = window.event.pageY + 'px';
 
 	
 	
@@ -137,9 +137,7 @@ d3.csv("Map2.csv", function(cdata) {
 			.enter()
 			.append("path")
 			.attr("d", path)
-			.on("mouseover", hoveron)
-			.on("mouseout", hoverout)
-			.on('click', showDetails)
+			.on("mouseover", showDetails)
 			.style("cursor", "pointer")
 			.style("stroke", "#777")
 			.style("fill", function(d) {
