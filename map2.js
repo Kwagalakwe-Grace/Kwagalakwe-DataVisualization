@@ -137,8 +137,9 @@ d3.csv("Map2.csv", function(cdata) {
 			.enter()
 			.append("path")
 			.attr("d", path)
+			.on("mouseover", hoveron)
 			.on("mouseover", showDetails)
-			.style("cursor", "pointer")
+			.on("mouseout", hoverout)
 			.style("stroke", "#777")
 			.style("fill", function(d) {
 
