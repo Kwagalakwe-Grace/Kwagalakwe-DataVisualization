@@ -87,7 +87,7 @@
     
       var mousemove = function(d) {
         tooltip
-          .html(d.District + &nbsp &nbsp + "Invalid Votes  "  + d.Invalid_Votes + &nbsp &nbsp " Valid Votes " + d.Valid_Votes)
+          .html(d.District + " &nbsp"+ "Invalid Votes  "  + d.Invalid_Votes + " Valid Votes " + d.Valid_Votes)
           .style("left", (d3.mouse(this)[0]+90) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
