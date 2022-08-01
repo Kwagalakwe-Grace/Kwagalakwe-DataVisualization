@@ -8,7 +8,15 @@
 </head>
 
 <body>
-
+<a href="index.html">Voter turnup</a> &nbsp &nbsp
+  <a href="map.html">Voters</a> &nbsp &nbsp
+  <a href="piechart.html">Pie-Chart</a>&nbsp &nbsp
+  <a href="scatterplot.html">Scatter-Plot</a> &nbsp &nbsp
+  <a href="barchart.html">Bar-Chart</a>
+  <div class="container">
+    <h3> Uganda Presidential Elections 2021: Correletion between Valid and Invalid votes.</h3>
+    <li>Hover on dot to show details </li>
+    
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 
@@ -57,8 +65,6 @@
         .attr("stroke", "black")
         .text("Valid votes");
     
-      // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
-      // Its opacity is set to 0: we don't see it by default.
       var tooltip = d3.select("#Scatter")
         .append("div")
         .style("opacity", 0)
@@ -73,8 +79,7 @@
     
     
     
-      // A function that change this tooltip when the user hover a point.
-      // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
+      
       var mouseover = function(d) {
         tooltip
           .style("opacity", 1)
@@ -83,7 +88,7 @@
       var mousemove = function(d) {
         tooltip
           .html(d.District +" " + "Invalid Votes  "  + d.Invalid_Votes + " Valid Votes " + d.Valid_Votes)
-          .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+          .style("left", (d3.mouse(this)[0]+90) + "px")
           .style("top", (d3.mouse(this)[1]) + "px")
       }
     
@@ -98,7 +103,7 @@
       // Add dots
       svg.append('g')
         .selectAll("dot")
-        .data(data.filter(function(d,i){return i<146})) // the .filter part is just to keep a few dots on the chart, not all of them
+        .data(data.filter(function(d,i){return i<146}))
         .enter()
         .append("circle")
           .attr("cx", function (d) { return x(d.Invalid_Votes); } )
