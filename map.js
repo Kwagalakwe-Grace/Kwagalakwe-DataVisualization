@@ -15,10 +15,10 @@ Mustache.parse(template);
 
 //  hover on event 
 var hoveron = function(d) {
-	console.log('d', d, 'event', window.event);
+	console.log('d', d, 'event', event);
 	var div = document.getElementById('tooltip');
-	div.style.left = window.event.pageX + 'px';
-	div.style.top = window.event.pageY + 'px';
+	div.style.left = event.pageX + 'px';
+	div.style.top = event.pageY + 'px';
 
 	
 	//Fill yellow to highlight
