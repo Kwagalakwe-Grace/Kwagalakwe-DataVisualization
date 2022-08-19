@@ -3,7 +3,7 @@ var width = 500,
 	height = 500;
 
 // Field reference to csv column
-var field = "Valid Votes"
+var field = "Total Votes"
 
 //Number formatting
 
