@@ -55,7 +55,7 @@ var hoverout = function(d) {
     .style("opacity", 0);    
 }
 
-d3.csv("pie_chart.csv", type, function(error, data) {
+d3.csv("Pie_Chart.csv", type, function(error, data) {
   if (error) throw error;
   
  
